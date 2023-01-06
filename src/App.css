@@ -1,0 +1,155 @@
+:root{
+    --green:#0E8784;
+    --dark-grey:#333D4B;
+    --pink:#FDD6BA;
+    --cream:#FEFCF7;
+    --grey:#83888F;
+
+    --ff-primary:'Fraunces', serif;
+    --ff-secondary: 'Barlow', serif ;
+
+    /*font sizes*/
+    --header-biggest: 9.375rem;
+    --header-big: 4.5rem;
+    --header-medium: 2.25rem;
+    --header-small: 2em;
+    --header-smallest: 1.5rem;
+    --body : 1rem;
+    --nav-links :.75rem;
+
+    /*line-heigths*/
+    --line-biggest:77px;
+    --line-big:77px;
+    --line-medium:48px;
+    --line-small:36px;
+    --line-smallest:32px;
+    --line-body:32px;
+    --line-nav-links:26px;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 1.5rem;
+}
+
+.hamburger{
+    display: none;
+}
+
+.nav-list{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-list-item{
+    list-style: none;
+    text-decoration: none;
+    margin-right: 2rem;
+}
+
+.nav-list-item:last-child{
+    margin-right: 0;
+}
+
+.nav-links{
+    font-family: var(--ff-secondary);
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 700;
+    letter-spacing: .92px;
+    text-transform: uppercase;
+    font-size: var(--nav-links);
+    color: var(--grey);
+}
+
+.nav-links:hover,
+.nav-links:focus{
+    color: var(--dark-grey);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:700px){
+    nav{
+        position: relative;
+    }
+
+    .hamburger{display: block;}
+
+    .nav-list{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        font-family: var(--ff-primary);
+        position: absolute;
+        margin: 0;
+        width: 100%;
+        top: 130%;
+        left: 0;
+        transform: translateY(-230%);
+        transition: 300ms ease-in-out;
+        
+    }
+
+    .nav-list-item{
+        padding: 0;
+        list-style: none;
+        font-size:var(--header-smallest);
+        margin-bottom: 2rem;
+    }
+
+    .nav-links{
+        text-decoration: none;
+        color:var(--dark-grey);
+    }
+ 
+}
