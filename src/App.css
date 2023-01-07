@@ -27,11 +27,21 @@
     --line-nav-links:26px;
 }
 
+.wrapper{
+    width: calc(100% - 48px);
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
 nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2rem 1.5rem;
+    padding: 2rem 0;
+}
+
+.logo{
+    height: 24px;
 }
 
 .hamburger{
@@ -69,55 +79,6 @@ nav{
     color: var(--dark-grey);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media(max-width:700px){
     nav{
         position: relative;
@@ -133,10 +94,11 @@ nav{
         position: absolute;
         margin: 0;
         width: 100%;
-        top: 130%;
+        top:100%;
         left: 0;
         transform: translateY(-230%);
-        transition: 300ms ease-in-out;
+        transition: 600ms ease-in-out;
+        background-color: #fff;
         
     }
 
@@ -150,6 +112,10 @@ nav{
     .nav-links{
         text-decoration: none;
         color:var(--dark-grey);
+    }
+
+    .logo{
+        height:16px;
     }
  
 }

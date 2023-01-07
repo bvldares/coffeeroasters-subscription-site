@@ -1,0 +1,363 @@
+:root{
+    --green:#0E8784;
+    --dark-grey:#333D4B;
+    --pink:#FDD6BA;
+    --cream:#FEFCF7;
+    --grey:#83888F;
+
+    --ff-primary:'Fraunces', serif;
+    --ff-secondary: 'Barlow', serif ;
+
+    /*font sizes*/
+    --header-biggest: 9.375rem;
+    --header-big: 4.5rem;
+    --header-medium: 2.25rem;
+    --header-small: 2em;
+    --header-smallest: 1.5rem;
+    --body : 15px;
+    --nav-links :.75rem;
+
+    /*line-heigths*/
+    --line-biggest:77px;
+    --line-big:77px;
+    --line-medium:48px;
+    --line-small:40px;
+    --line-smallest:32px;
+    --line-body:26px;
+    --line-nav-links:26px;
+}
+
+.home,
+.home-hero,
+.home-collection,
+.home-whyus,
+.home-how,
+.home-collection-product{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home-hero{
+    background-image: url("../assets/home/mobile/image-hero-coffeepress.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding:6rem 1rem;
+}
+
+.home-hero-title{
+    font-family: var(--ff-primary);
+    color: var(--cream);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    line-height: var(--line-small);
+}
+
+.home-hero-description{
+    font-family: var(--ff-secondary);
+    color: var(--cream);
+    font-weight: 300;
+    margin-bottom: 2.5rem;
+}
+
+.home-redirect-btn{
+    background-color: var(--green);
+    padding:1rem 2rem;
+    border-radius: 10px;
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--cream);
+    font-family: var(--ff-primary);
+}
+
+.home-collection{
+    margin-top: 7.5rem;
+
+}
+
+.home-collection-product{
+    margin-bottom:3rem;
+}
+
+.home-collection-product-img{
+    width: 200px;
+    margin-left: 35px;
+}
+
+.home-collection-product-name{
+    font-family: var(--ff-primary);
+    font-size: var(--header-smallest);
+    color: var(--dark-grey);
+    margin-top:1.5rem;
+    margin-bottom: 1rem;
+}
+
+.home-collection-product-description{
+    font-family: var(--ff-secondary);
+    text-align: center;
+    width: 90%;
+}
+
+.home-whyus{
+    background-color: var(--dark-grey);
+    border-radius: 10px;
+    padding: 3.25rem 1.5rem;
+    max-height: 900px;
+    color: var(--cream);
+    text-align: center;
+    position: relative;
+}
+
+.home-whyus-title{
+    font-family: var(--ff-primary);
+    font-size: 28px;
+    margin-bottom: 1rem;
+}
+
+.home-whyus-description{
+    font-family: var(--ff-secondary);
+    font-weight: 300;
+    font-size: var(--body);
+    line-height: var(--line-body);
+    margin-bottom: 3rem;
+    
+}
+
+.home-whyus-feature{
+    background-color: var(--green);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:3.75rem 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: var(--cream);
+}
+
+.home-whyus-feature-title{
+    margin-top: 4rem;
+    margin-bottom: 1.5rem;
+    font-family: var(--ff-primary);
+    font-size: var(--header-smallest);
+}
+
+.home-whyus-feature-description{
+    font-family: var(--ff-secondary);
+    font-weight: 300;
+    line-height: var(--line-body);
+    
+}
+
+.home-how{
+    margin-top: 700px;
+    margin-bottom: 120px;
+    text-align: center;
+    font-family: var(--ff-secondary);
+}
+
+.home-how-intro,
+.home-how-step-number,
+.home-how-step-title{
+    font-family: var(--ff-primary);
+}
+
+.home-how-step{
+    margin-bottom: 3.5rem;
+}
+
+.home-how-step:last-child{
+    margin-bottom: 5rem;
+}
+
+
+.home-how-intro{
+    font-size: 1.5rem;
+    color: var(--grey);
+    margin-bottom: 4rem;
+}
+
+.home-how-step-number{
+    font-size: var(--header-big);
+    color:var(--pink);
+    margin-bottom: 1rem;
+}
+
+.home-how-step-title{
+    font-size: 28px;
+    color: var(--dark-grey);
+    margin-bottom: 1.5rem;
+}
+
+.home-how-step-description{
+    font-size: var(--body);
+    font-weight: 300;
+    line-height: var(--line-body);
+}
+
+@media(min-width:650px){
+    .home-hero{
+        background-image: url("../assets/home/tablet/image-hero-coffeepress.jpg");
+        background-size: cover;
+        text-align: left;
+        align-items: flex-start;
+        width: 100%;
+        padding-left: 50px;
+    }
+
+    .home-hero-title{
+        font-size: 48px;
+        line-height: var(--line-medium);
+    }
+
+    .home-hero-description{
+        max-width:400px;
+    }
+
+    .home-collection{
+        max-width: 575px;
+    }
+
+    .home-collection-product{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 1.5rem;
+    }
+
+    .home-collection-product-img{
+        margin: 0;
+        grid-column: 1;
+        grid-row: 1/4;
+    }
+
+    .home-collection-product-name{
+        grid-column: 2;
+        grid-row: 1;
+        margin-top: 0;
+    }
+
+    .home-collection-product-description{
+        grid-column: 2;
+        grid-row: 2;
+        text-align: left;
+    }
+
+    .home-whyus{
+        max-height: 575px;
+    }
+
+    .home-whyus-title{
+        font-size: var(--header-small);
+    }
+
+    .home-whyus-description{
+        max-width: 540px;
+    }
+
+    .home-whyus-feature{
+        margin-left: 2rem;
+        margin-right: 2rem;
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: repeat(2, auto);
+        text-align: left;
+        column-gap: 30px;
+    }
+
+    
+    .home-whyus-feature-img{
+        grid-row: 1/3;
+        justify-self: center;
+
+    }
+
+    .home-whyus-feature-title{
+        grid-column: 2;
+        grid-row: 1;
+        margin-top: 0;
+        margin-bottom: 1rem;
+        
+    }
+
+    .home-whyus-feature-description{ 
+       line-height: 28px; 
+       grid-column: 2;
+       grid-row: 2;
+    }
+
+    .home-how{
+        margin-top: 500px;
+        text-align: left;
+        align-items: flex-start;
+    }
+
+    .home-how-steps-wrapper{
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .home-how-steps-wrapper::before{
+        content:"";
+        position: absolute;
+        top: -5%;
+        width:74%;
+        background-color: var(--pink);
+        height: 2px;
+    }
+
+    .home-how-step{
+        width: 28%;
+        position: relative;
+        max-width: 355px;
+    }
+
+
+    .home-how-step::before{
+        content: "";
+        position: absolute;
+        top: -9%;
+        width: 28px;
+        height: 28px;
+        border: 2px solid #0E8784;
+        border-radius: 50%;
+        background-color: #fff;
+    }
+
+    .home-how-step-title{
+        line-height: var(--line-smallest);
+    }
+
+
+    
+}
+
+
+@media(min-width:900px){
+    .home-whyus-feature-wrapper{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .home-whyus-feature{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 48px;
+        margin: 0;
+        width: 31%;
+    }
+
+    .home-whyus-feature-img:last-child{
+        height: 72px;
+    }
+
+    .home-whyus-feature-title{
+        margin-top:1.5em;
+    }
+}

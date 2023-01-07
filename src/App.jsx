@@ -4,9 +4,11 @@ import {Routes, Route } from "react-router-dom";
 import Home from "./Components/Home"
 import About from "./Components/About"
 import Subscribe from "./Components/Subscribe"
+import Footer from "./Components/Footer"
 
 export default function App(){
     return (
+        <>
         <div className="wrapper">
             <Nav />
 
@@ -16,7 +18,9 @@ export default function App(){
                 <Route path="/createplan" element={<Subscribe/>}></Route>
             </Routes>
 
-
         </div>
+
+        <Footer />
+        </>
     )
 }
