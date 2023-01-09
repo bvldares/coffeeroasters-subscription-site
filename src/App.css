@@ -28,8 +28,8 @@
 }
 
 .wrapper{
-    width: calc(100% - 48px);
     max-width: 1280px;
+    padding: 1.5rem;
     margin: 0 auto;
 }
 

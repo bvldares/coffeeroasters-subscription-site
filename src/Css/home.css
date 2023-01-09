@@ -38,6 +38,7 @@
     align-items: center;
 }
 
+
 .home-hero{
     background-image: url("../assets/home/mobile/image-hero-coffeepress.jpg");
     background-position: top center;
@@ -197,6 +198,14 @@
     font-size: var(--body);
     font-weight: 300;
     line-height: var(--line-body);
+    max-width: 350px;
+}
+
+
+@media(min-width:520px) and (max-width:650px){
+    .home-whyus-feature-description{
+        max-width: 60%;
+    }
 }
 
 @media(min-width:650px){
@@ -338,9 +347,50 @@
 
 
 @media(min-width:900px){
+    .home-hero{
+        background-image: url("../assets/home/desktop/image-hero-coffeepress.jpg");
+        background-size: cover;
+    
+    }
+
+    .home-collection{
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 100%;
+        margin-bottom: 7.5rem;
+    }
+
+    .home-collection-product{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .home-collection-product-img{
+        margin-bottom: 2em;
+    }
+
+    .home-collection-product-description{
+        text-align: center;
+        max-width: 255px;
+    }
+
+
+    .home-whyus{
+        height: 500px;
+        max-height: 100%;
+        padding-bottom: 0;
+        padding-top: 100px;
+        width: 100%;
+        position: relative;
+    }
+
+
     .home-whyus-feature-wrapper{
         display: flex;
         justify-content: space-between;
+        position: absolute;
+        top: 60%;
+        max-width: 90%;
     }
 
     .home-whyus-feature{
@@ -359,5 +409,9 @@
 
     .home-whyus-feature-title{
         margin-top:1.5em;
+    }
+
+    .home-how{
+        margin-top: 300px;
     }
 }

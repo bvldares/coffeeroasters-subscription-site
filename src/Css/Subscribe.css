@@ -1,0 +1,240 @@
+:root{
+    --green:#0E8784;
+    --dark-grey:#333D4B;
+    --pink:#FDD6BA;
+    --cream:#FEFCF7;
+    --grey:#83888F;
+
+    --ff-primary:'Fraunces', serif;
+    --ff-secondary: 'Barlow', serif ;
+
+    /*font sizes*/
+    --header-biggest: 9.375rem;
+    --header-big: 4.5rem;
+    --header-medium: 2.25rem;
+    --header-small: 2em;
+    --header-smallest: 1.5rem;
+    --body : 15px;
+    --nav-links :.75rem;
+
+    /*line-heigths*/
+    --line-biggest:77px;
+    --line-big:77px;
+    --line-medium:48px;
+    --line-small:40px;
+    --line-smallest:32px;
+    --line-body:26px;
+    --line-nav-links:26px;
+}
+
+body{
+    font-size: var(--body);
+}
+
+
+.sub__hero--title,
+.sub__steps--step--title,
+.sub__steps--step--number {
+    font-family: var(--ff-primary);
+}
+
+
+.sub__hero--title{font-size:2.5rem;}
+.sub__steps--step--title{font-size: 1.75rem;}
+.sub__steps--step--number{
+    font-size:4.5rem;
+    color: var(--pink);
+}
+
+
+.sub__hero{
+    border-radius: 10px;
+    padding: 100px 1.5rem;
+    color: var(--cream);
+    text-align: center;
+    background-image: url("../assets/plan/mobile/image-hero-blackcup.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.sub__hero--p{
+    margin-bottom: 30px;
+    line-height: var(--line-body);
+}
+
+.sub__steps{
+    background-image: url("../assets/plan/tablet/bg-steps.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    padding: 80px 0;
+    margin-top: 120px;
+    margin-bottom: 120px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sub__steps--step{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: var(--cream);
+}
+
+.sub_steps--step--p{
+    margin: 1.5rem 0;
+    padding: 0 1.5rem;
+    max-width: 355px;
+}
+
+form{
+    color: var(--dark-grey);
+}
+
+
+.form-question{
+    font-size: var(--header-small);
+    color:var(--grey);
+    font-family: var(--ff-primary);
+    margin-bottom: 1em;
+}
+
+.form-answer{
+    padding: 1.5rem;
+    background-color: #edeae3;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+
+.form-answer-title{
+    font-size: var(--header-smallest);
+    font-family: var(--ff-primary);
+}
+
+.form-answer-p{
+    max-width: 220px;
+}
+
+
+.answer-label{
+    padding: 1.5em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.order-summary{
+    padding: 2.5rem 3rem;
+    background-image: url("../assets/plan/desktop/bg-order-summary.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--cream);
+    border-radius: 10px;
+}
+
+.order-summary-title{
+    text-transform: uppercase;
+    color: var(--grey);
+}
+
+.order-summary-resume{
+    margin-top: .5rem;
+    font-family: var(--ff-primary);
+    font-size: var(--header-smallest);
+}
+
+.order-summary-span{
+    color: var(--green);
+}
+
+
+
+@media(min-width:500px){
+    .sub__hero--title{
+        font-size: 3rem;
+    }
+}
+
+@media(min-width:600px){
+    .sub__hero{
+        background-image: url("../assets/plan/tablet/image-hero-blackcup.jpg");
+        background-position: center;
+        text-align: left;
+        padding-left: 60px;
+        padding-top: 130px;
+        padding-bottom: 130px;
+    }
+
+    .sub__hero--p{
+        width: 60%;
+        margin-bottom: 0;
+    }
+}
+
+@media(min-width:750px){
+
+    .sub__steps{
+        display: flex;
+        flex-direction: row;
+        justify-content:space-between;
+        width: 100%;
+        padding-left:2.5em;
+        padding-right:2.5em;
+        column-gap: 1.5em;
+    }
+
+    .sub__steps--step{
+        text-align: left;
+        align-items: flex-start;
+    }
+
+    .sub__steps--step--title{
+        line-height: var(--line-smallest);
+        white-space: pre-wrap;
+    }
+  
+
+    .sub_steps--step--p{
+        padding:0;
+    }
+
+
+}
+
+
+@media(min-width:900px){
+    .sub__hero--title{
+        font-size: 4.5rem;
+    }
+}
+
+
+@media(max-width:1000px){
+    .order-checklist{
+        display: none;
+    }
+}
+
+@media(min-width:1100px){
+    .sub__hero{
+        background-image: url("../assets/plan/desktop/image-hero-blackcup.jpg");
+    }
+
+    .sub__hero--p{
+        width: 40%;
+    }
+}
+

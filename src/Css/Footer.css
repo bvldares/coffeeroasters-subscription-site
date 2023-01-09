@@ -76,3 +76,21 @@ footer{
         margin-top: 2em;
     }
 }
+
+
+@media(min-width:900px){
+    footer{
+        flex-direction: row;
+        
+    }
+
+    .footer-list{
+        margin: 0;
+        margin-left: 100px;
+    }
+    
+
+    .footer-socials{
+        margin-left: auto;
+    }
+}

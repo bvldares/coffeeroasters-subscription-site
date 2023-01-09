@@ -11,7 +11,7 @@ import "../Css/home.css"
 
 export default function Home(){
     return(
-        <section className="home">
+        <section className="home margin-class">
             <section className="home-hero">
                 <h1 className="home-hero-title">Great coffee <br /> made simple.</h1>
                 <p className="home-hero-description">

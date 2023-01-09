@@ -1,0 +1,284 @@
+:root{
+        --green:#0E8784;
+        --dark-grey:#333D4B;
+        --pink:#FDD6BA;
+        --cream:#FEFCF7;
+        --grey:#83888F;
+    
+        --ff-primary:'Fraunces', serif;
+        --ff-secondary: 'Barlow', serif ;
+    
+        /*font sizes*/
+        --header-biggest: 9.375rem;
+        --header-big: 4.5rem;
+        --header-medium: 2.25rem;
+        --header-small: 2em;
+        --header-smallest: 1.5rem;
+        --body : 15px;
+        --nav-links :.75rem;
+    
+        /*line-heigths*/
+        --line-biggest:77px;
+        --line-big:77px;
+        --line-medium:48px;
+        --line-small:40px;
+        --line-smallest:32px;
+        --line-body:26px;
+        --line-nav-links:26px;
+}
+
+body{
+    font-family: var(--ff-secondary);
+    font-size: 15px;
+}
+
+.about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 120px;
+    margin-bottom: 120px;
+}
+
+.about img{
+    border-radius: 10px;
+}
+
+.about__hero--title,
+.about__commit--title,
+.about__quality--intro-title,
+.about__hq--location,
+.about__hq--title{
+    font-family: var(--ff-primary);
+    font-size: 1.75rem;
+}
+
+.about__commit--title{ font-size: 2rem;}
+.about__hq--title{ font-size: 1.5rem;}
+
+
+.about__hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6em 0;
+    color: var(--cream);
+    text-align: center;
+    background-image: url("../assets/about/mobile/image-hero-whitecup.jpg");
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-color:lightgrey;
+    background-blend-mode: multiply;
+    border-radius: 10px;
+}
+
+.about__hero--title{
+    margin-bottom: 1rem;
+}
+
+.about-hero--paragraph{
+    padding: 0 1.5rem;
+}
+
+.about__commit{
+    text-align: center;
+    color: var(--dark-grey);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about__commit--title{
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.about__quality-wrapper{
+    margin-top: 80px;
+    border-radius: 10px;
+    background-image: url("../assets/about/mobile/bg-quality.png");
+}
+
+.about__quality{
+    position: relative;
+    top: -80px;
+    color: var(--cream);
+    text-align: center;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about__quality--img{
+    margin: 0 auto;
+}
+
+.about__quality--intro-title{
+    line-height: var(--line-smallest);
+    margin-top:4rem ;
+    margin-bottom: 1.5rem;
+}
+
+
+.about__hq,
+.about__hq--office{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about__hq--office{
+    margin-bottom:5rem;
+    text-align: center;
+}
+
+.about__hq--office:last-child{
+    margin-bottom: 0;
+}
+
+.about__hq--title{
+    margin-bottom: 4.25rem;
+    color: var(--grey);
+}
+
+
+
+.about__hq--img{margin-bottom:2.875rem;}
+.about__hq--location{
+    margin-bottom: 1.5rem;
+}
+    
+
+@media(min-width:550px){
+    .about__hero{
+        background-image: url("../assets/about/tablet/image-hero-whitecup.jpg");
+        background-size: cover;
+        text-align: left;
+        align-items: flex-start;
+        padding-left: 1.5rem;
+        width: 100%;
+    }
+
+
+    .about-hero--paragraph{
+        padding: 0;
+        max-width: 60%;
+    }
+}
+
+@media(min-width:650px){
+    .about__commit--title,
+    .about__hero--title,
+    .about__quality--intro-title{
+        font-size:2rem;
+    }
+
+    .about__commit{
+        max-width: 1100px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        column-gap: 1.5rem;
+    }
+
+    .about__commit--img{
+        content: url("../assets/about/tablet/image-commitment.jpg");
+    }
+
+    .about__commit--wrapper{
+        text-align: left;
+        max-width: 540px;
+    }
+
+    .about__commit--title{
+        margin-top: 0;
+    }
+
+    .about__hq--title{display: none;}
+
+    .about__hq{
+        margin-top: 4em;
+        max-width: 1100px;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .about__hq::before{
+        content: "Our headquarters";
+        position: absolute;
+        top: -30%;
+        font-size: 24px;
+        font-family: var(--ff-primary);
+        color: var(--grey);
+    }
+
+    .about__hq--office{
+        
+        margin-bottom: 0;
+    }
+}
+
+
+@media(min-width:900px){
+
+    .about__commit--title,
+    .about__hero--title,
+    .about__quality--intro-title{
+        font-size:2.5rem;
+    }
+
+    .about__hero{
+        padding: 130px 5em;
+    }
+
+
+    .about__commit--img{
+        content: url("../assets/about/desktop/image-commitment.jpg");
+    }
+}
+
+
+@media(min-width:1050px){
+
+    .about__hero{
+        background-image: url("../assets/about/desktop/image-hero-whitecup.jpg");
+    }
+
+    .about__quality-wrapper{
+        background-image: url("../assets/about/desktop/bg-quality.png");
+    }
+
+    
+
+    .about__quality{
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 2em;
+        text-align: left;
+        padding-left:5em;
+        padding-right: 5em;        
+    }
+
+    .about__quality--img{
+        content: url("../assets/about/desktop/image-quality.jpg");
+        
+    }
+
+    .about__quality--intro-title{
+        margin-top: 0;
+        font-size: var(--header-medium);
+        margin-bottom: 2rem;
+    }
+
+    .about__quality--intro-paragraph{
+        max-width: 540px;
+    }
+
+
+}
