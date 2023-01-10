@@ -79,6 +79,7 @@ body{
 
 .about-hero--paragraph{
     padding: 0 1.5rem;
+
 }
 
 .about__commit{
@@ -164,7 +165,7 @@ body{
 
     .about-hero--paragraph{
         padding: 0;
-        max-width: 60%;
+        width: 60%;
     }
 }
 
@@ -225,6 +226,10 @@ body{
 
 
 @media(min-width:900px){
+
+    .about-hero--paragraph{
+        width: 40%;
+    }
 
     .about__commit--title,
     .about__hero--title,

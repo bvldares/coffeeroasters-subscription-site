@@ -8,7 +8,8 @@ import "../Css/Footer.css"
 
 export default function Footer(){
     return ( 
-        <footer>
+        <div className="wrapper-footer">
+            <footer>
             <img src={logo} alt="cofferoasters logo" className="footer-logo" />
             <ul className="footer-list">
                 <li className="footer-list-item"> <Link to="/" className="footer-links">Home</Link> </li>
@@ -22,5 +23,6 @@ export default function Footer(){
                 <li className="footer-social"><img src={instagramIcon} alt="instagram icon" /></li>
             </ul>
         </footer>
+        </div>
     )
 }
