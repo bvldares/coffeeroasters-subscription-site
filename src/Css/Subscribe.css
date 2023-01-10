@@ -102,13 +102,6 @@ form{
     margin-bottom: 1em;
 }
 
-.form-answer{
-    padding: 1.5rem;
-    background-color: #edeae3;
-    border-radius: 10px;
-    margin-bottom: 1rem;
-}
-
 
 .form-answer-title{
     font-size: var(--header-smallest);
@@ -122,19 +115,22 @@ form{
 
 .answer-label{
     padding: 1.5em;
+    display: block;
+    background-color: #e9e7e7;
+    border-radius: 10px;
+    margin-bottom: 1em;
+
+
 }
 
+input[type=radio]{
+    display: none;
+}
 
-
-
-
-
-
-
-
-
-
-
+input[type="radio"]:checked + label{
+    background-color: var(--green);
+    color: var(--cream);
+}
 
 .order-summary{
     padding: 2.5rem 3rem;
@@ -158,6 +154,36 @@ form{
 
 .order-summary-span{
     color: var(--green);
+}
+
+.form-btn{
+    padding:1rem 2rem;
+    font-family: var(--ff-primary);
+    color: var(--cream);
+    background-color: var(--green);
+    border: none;
+    border-radius: 10px;
+    align-self: flex-end;
+   
+}
+
+.form-btn:hover{
+    background-color: var(--grey);
+    color:var(--cream);
+}
+
+.button-container{
+    margin-top: 1.5em;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form-error{
+    display: none;
+    color: red;
+    text-decoration: underline;
 }
 
 
@@ -186,6 +212,8 @@ form{
 
 @media(min-width:750px){
 
+    
+
     .sub__steps{
         display: flex;
         flex-direction: row;
@@ -210,6 +238,54 @@ form{
     .sub_steps--step--p{
         padding:0;
     }
+
+    .order-checklist{
+        display: block;
+        width: 60%;
+        padding: 0 1.5rem;
+    }
+
+    .order__list-item{
+        list-style: none;
+    
+        font-family: var(--ff-primary);
+        font-size: 1.2rem;
+        border-bottom: 1px solid #e9e7e7;
+        width: 180px;
+        white-space: nowrap;
+        padding: 1rem 0;
+    }
+
+    .order__list-item span{
+        color: var(--green);
+        margin-right: 1rem;
+    }
+
+
+
+    .sub__order{
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+    .form-answers-wrapper{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .answer-label{
+        padding-bottom:2rem;
+        width: 30%;
+        max-width: 228px;
+        margin-bottom: 4rem;
+    }
+
+
+    .form-answer-title{
+        margin-bottom: 1.5rem;
+    }
+
 
 
 }
