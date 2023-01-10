@@ -27,12 +27,17 @@ export default function Subscribe(){
 
         if(mode && type && quantity && grind && delivery){
             document.querySelector(".form-error").style.display = "none"
-            setOpenModal(true)
+            document.querySelector("dialog").showModal()
+
         }else{
             document.querySelector(".form-error").style.display = "block"
         }
     }
 
+
+    function closeModal(){
+        document.querySelector("dialog").close()
+    }
 
 
 
@@ -228,7 +233,7 @@ export default function Subscribe(){
 
                 <div className="button-container">
                     <button className="form-btn" onClick={openDialog}>Create my plan!</button>
-                    <p className="form-error">Please, make sure you selected all the required fields before proceed</p>
+                    <p className="form-error">Please, make sure you selected all the required fields before proceeding</p>
                 </div>
                 
                 </form>
@@ -237,16 +242,16 @@ export default function Subscribe(){
             
             </section>
 
-            <dialog open={openModal} >
-                <h2 className="dialog title">Order Summary</h2>
-                <p className="order-summary-resume">
+            <dialog open={openModal} onClose={closeModal} >
+                <h2 className="dialog-title">Order Summary</h2>
+                <p className="dialog-summary-resume">
                     “I drink my coffee as  <span className="order-summary-span">{mode ? mode : " _____ "} </span>, 
                     with a <span className="order-summary-span" >{type ? type : " _____ "}</span>  type of bean.  
                     <span className="order-summary-span">{quantity ? " " + quantity + "g " : " ______ "}</span> 
                     ground ala <span className="order-summary-span">{grind ? grind : " _____ "}</span> 
                     , sent to me <span className="order-summary-span">{delivery ? delivery : " ______ "}</span>.”
                 </p>
-                <button className="form-btn">Checkout</button>
+                <button className="dialog-btn" onClick={closeModal}>Checkout</button>
 
             </dialog>
 

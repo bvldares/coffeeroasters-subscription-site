@@ -187,6 +187,49 @@ input[type="radio"]:checked + label{
 }
 
 
+dialog{
+    padding: 0;
+    border: none;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+}
+
+
+.dialog-title{
+    background-image: url("../assets/plan/desktop/bg-modal-top.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2rem 2rem;
+    font-size: 1.5rem;
+    font-family:var(--ff-primary);
+    color: var(--cream);
+}
+
+.dialog-summary-resume{
+    font-family:var(--ff-primary);
+    padding: 1.5em;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.dialog-btn{
+    padding: 1rem 2rem;
+    background-color: var(--green);
+    border: none;
+    color: var(--cream);
+    margin-bottom: 3em;
+    margin-left: 1.5rem;
+    border-radius: 10px;
+    font-family:var(--ff-primary);
+}
+
+dialog::backdrop{
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+
+
 
 @media(min-width:500px){
     .sub__hero--title{
@@ -211,9 +254,6 @@ input[type="radio"]:checked + label{
 }
 
 @media(min-width:750px){
-
-    
-
     .sub__steps{
         display: flex;
         flex-direction: row;
@@ -287,6 +327,16 @@ input[type="radio"]:checked + label{
     }
 
 
+    .dialog-title{
+        font-size: 2.5rem;
+    }
+
+    .dialog-summary-resume{
+        font-size: 32px;
+        text-align: left;
+    }
+
+    
 
 }
 
